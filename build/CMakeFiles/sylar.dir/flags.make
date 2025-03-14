@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -Dsylar_EXPORTS
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/ubuntu/server/.
 
 CXX_FLAGS =  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -fPIC
 
