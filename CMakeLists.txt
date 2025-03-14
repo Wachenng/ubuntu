@@ -22,7 +22,7 @@ add_library(sylar SHARED ${LIB_SRC})
 
 add_executable(test tests/test.cc)
 add_dependencies(test sylar)
-target_link_libraries(test sylar)
+target_link_libraries(test sylar yaml-cpp)
 
 add_executable(test_config tests/test_config.cc)
 add_dependencies(test_config sylar)
