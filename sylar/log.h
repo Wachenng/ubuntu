@@ -11,6 +11,7 @@
 #include <vector>
 #include <time.h>
 #include <string.h>
+#include "util.h"
 #include "singleton.h"
 
 
@@ -43,6 +44,7 @@
 #define SYLAR_LOG_FMT_FATAL(logger, fmt, ...) SYLAR_LOG_FMT_LEVEL(logger, sylar::LogLevel::FATAL, fmt, __VA_ARGS__)
 
 
+#define SYLAR_LOG_ROOT() sylar::LoggerMgr::GetInstance()->getRoot()
 
 namespace sylar {
 
@@ -218,6 +220,9 @@ public:
     Logger::ptr getLogger(const std::string& name);
 
     void init();
+
+    Logger::ptr getRoot() const {return m_root;};
+
 private:
     std::map<std::string, Logger::ptr> m_loggers;
     Logger::ptr m_root;

@@ -32,8 +32,9 @@ CMakeFiles/test.dir/tests/test.cc.o: /home/ubuntu/server/tests/test.cc \
  /usr/include/c++/11/bits/exception_defines.h \
  /usr/include/c++/11/bits/cxxabi_init_exception.h \
  /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/hash_bytes.h \
- /usr/include/c++/11/new /usr/include/c++/11/bits/nested_exception.h \
- /usr/include/c++/11/bits/move.h /usr/include/c++/11/type_traits \
+ /usr/include/c++/11/new /usr/include/c++/11/bits/move.h \
+ /usr/include/c++/11/type_traits \
+ /usr/include/c++/11/bits/nested_exception.h \
  /usr/include/c++/11/bits/char_traits.h \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/c++/11/bits/functexcept.h \
@@ -174,9 +175,8 @@ CMakeFiles/test.dir/tests/test.cc.o: /home/ubuntu/server/tests/test.cc \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc /usr/include/string.h \
- /usr/include/strings.h /home/ubuntu/server/tests/../sylar/singleton.h \
- /home/ubuntu/server/tests/../sylar/util.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/strings.h /home/ubuntu/server/tests/../sylar/util.h \
+ /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
@@ -194,4 +194,6 @@ CMakeFiles/test.dir/tests/test.cc.o: /home/ubuntu/server/tests/test.cc \
  /usr/include/linux/limits.h \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
- /usr/include/x86_64-linux-gnu/bits/uio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+ /home/ubuntu/server/tests/../sylar/singleton.h \
+ /home/ubuntu/server/tests/../sylar/util.h
