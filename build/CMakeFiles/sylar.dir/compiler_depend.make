@@ -874,7 +874,9 @@ CMakeFiles/sylar.dir/sylar/config.cc.o: ../sylar/config.cc \
   /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
   /usr/include/x86_64-linux-gnu/bits/syscall.h \
   /usr/include/zconf.h \
-  ../sylar/singleton.h
+  ../sylar/singleton.h \
+  /usr/include/c++/11/unordered_set \
+  /usr/include/c++/11/bits/unordered_set.h
 
 CMakeFiles/sylar.dir/sylar/log.cc.o: ../sylar/log.cc \
   /usr/include/stdc-predef.h \
@@ -1221,6 +1223,8 @@ CMakeFiles/sylar.dir/sylar/util.cc.o: ../sylar/util.cc \
 
 ../sylar/util.cc:
 
+/usr/include/c++/11/unordered_set:
+
 /usr/include/x86_64-linux-gnu/bits/syscall.h:
 
 /usr/include/x86_64-linux-gnu/asm/unistd_64.h:
@@ -1500,6 +1504,8 @@ CMakeFiles/sylar.dir/sylar/util.cc.o: ../sylar/util.cc \
 /usr/include/c++/11/bits/valarray_before.h:
 
 /usr/include/c++/11/bits/stl_bvector.h:
+
+/usr/include/c++/11/bits/unordered_set.h:
 
 /usr/include/c++/11/bits/stl_vector.h:
 
