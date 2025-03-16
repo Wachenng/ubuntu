@@ -4,6 +4,9 @@
 #include <vector>
 
 sylar::ConfigVar<int>::ptr g_int_val_config = sylar::Config::Lookup("system.port", (int)8080, "system port");
+
+sylar::ConfigVar<float>::ptr g_int_valx_config = sylar::Config::Lookup("system.port", (float)8080, "system port");
+
 sylar::ConfigVar<float>::ptr g_float_val_config = sylar::Config::Lookup("system.value", (float)10.2f, "system value");
 
 sylar::ConfigVar<std::vector<int> >::ptr g_int_vec_val_config = sylar::Config::Lookup("system.int_vec", std::vector<int>{1, 2}, "system int vec");
