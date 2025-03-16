@@ -30,4 +30,34 @@ system:
     int_umap:
         k: 130
         k2: 120
-        k3: 110
+        k3: 
+
+class:
+    person:
+        name: sylar
+        age: 31
+        sex: true
+    map:
+      sylar01:
+          name: sylar1
+          age: 18
+          sex: false
+      sylar02:
+          name: sylar2
+          age: 40
+          sex: true
+    vec_map:
+        k1:
+          - name: m1
+            age: 33
+            sex: true
+          - name: m2
+            age: 35
+            sex: false
+        k2:
+          - name: m21
+            age: 35
+            sex: true
+          - name: m22
+            age: 46
+            sex: false
