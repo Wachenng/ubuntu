@@ -57,7 +57,8 @@ class NameFormatItem : public LogFormatter::FormatItem {
 public:
     NameFormatItem(const std::string& str = "") {}
     void format(std::ostream& os, std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) override {
-        os << logger->getName();
+        //event中也有一个logger,用event的才是最原始的logger
+        os << event->getLogger()->getName();
     }
 };
 
@@ -405,8 +406,13 @@ void Logger::delAppender(LogAppender::ptr appender) {
 void Logger::log(LogLevel::Level level, LogEvent::ptr event) {
     if(level >= m_level){
         auto self = shared_from_this();
-        for(auto& i : m_appenders){
-            i->log(self, level,event);
+        //最开始通过Manager定义的logger的等级是最低的,且没有配置appender 所以处理一下
+        if(!m_appenders.empty()) {                  //这个是给之后有appender的用的
+            for(auto& i : m_appenders){
+                i->log(self, level,event);
+            } 
+        } else if(m_root){                          //这个是给没有Appender的用的,暂时用他的root的log输出
+            m_root->log(level, event);
         }
     }
 }
@@ -436,13 +442,26 @@ void Logger::fatal(LogEvent::ptr event){
 LoggerManager::LoggerManager() {
     m_root.reset(new Logger);
     m_root->addAppender(LogAppender::ptr(new StdoutLogAppender));
+
+    init();
 }
 
 Logger::ptr LoggerManager::getLogger(const std::string& name) {
     auto it = m_loggers.find(name);
-    return it == m_loggers.end() ? m_root : it->second;
+    if(it != m_loggers.end()) {
+        return it->second;
+    }
+
+    //没有就创建一个并把创建的这个的根root定义为manager最开始创建的root
+    //创建完成后加到管理map中并返回
+    Logger::ptr logger(new Logger(name));
+    logger->m_root = m_root;
+    m_loggers[name] = logger;
+    return logger;
 }
 
-
+void LoggerManager::init() {
+    
+}
 
 }

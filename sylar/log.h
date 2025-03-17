@@ -45,10 +45,12 @@
 
 
 #define SYLAR_LOG_ROOT() sylar::LoggerMgr::GetInstance()->getRoot()
+#define SYLAR_LOG_NAME(name) sylar::LoggerMgr::GetInstance()->getLogger(name)
 
 namespace sylar {
 
 class Logger;
+class LoggerManager;
 
 /*********************************  LogLevel  *********************************/
 class LogLevel {
@@ -165,6 +167,7 @@ protected:
 
 /*********************************  Logger  *********************************/
 class Logger : public std::enable_shared_from_this<Logger> {
+friend class LoggerManager;
 public:
     typedef std::shared_ptr<Logger> ptr;
 
@@ -189,6 +192,7 @@ private:
     LogLevel::Level m_level;
     std::list<LogAppender::ptr> m_appenders;
     LogFormatter::ptr m_formatter;
+    Logger::ptr m_root;
 };
 
 /**********   StdoutLogAppender  **********/
