@@ -1,7 +1,9 @@
 #include "sylar/config.h"
 #include "sylar/log.h"
+#include "sylar/singleton.h"
 #include <yaml-cpp/yaml.h>
 #include <vector>
+#include <iostream>
 
 #if 0
 sylar::ConfigVar<int>::ptr g_int_val_config = sylar::Config::Lookup("system.port", (int)8080, "system port");
@@ -199,12 +201,26 @@ void test_class() {
 }
 
 /******************************   自定义类型 end    ******************************/
+void test_log() {
+    static sylar::Logger::ptr system_log = SYLAR_LOG_NAME("system");
+    SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
+
+    std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
+    YAML::Node root = YAML::LoadFile("/home/ubuntu/server/bin/conf/logs.yml");
+    sylar::Config::LoadFromYaml(root);
+    std::cout << "================" << std::endl;
+    std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
+
+    SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
+}
+
 
 int main(int argc, char** argv) {
     //test_boost();
     //test_yaml();
     //test_config();
 
-    test_class();
+    //test_class();
+    test_log();
     return 0;
 }

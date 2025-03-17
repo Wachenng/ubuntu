@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ubuntu/server/sylar/config.cc" "CMakeFiles/sylar.dir/sylar/config.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/config.cc.o.d"
+  "/home/ubuntu/server/sylar/config_log.cc" "CMakeFiles/sylar.dir/sylar/config_log.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/config_log.cc.o.d"
   "/home/ubuntu/server/sylar/log.cc" "CMakeFiles/sylar.dir/sylar/log.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/log.cc.o.d"
   "/home/ubuntu/server/sylar/util.cc" "CMakeFiles/sylar.dir/sylar/util.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/util.cc.o.d"
   )

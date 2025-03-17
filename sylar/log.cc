@@ -3,6 +3,7 @@
 #include <map>
 #include <functional>
 #include <stdarg.h>
+#include <yaml-cpp/yaml.h>
 
 namespace sylar {
 
@@ -24,6 +25,28 @@ const char* LogLevel::ToString(LogLevel::Level level) {
         return "UNKNOWN";
     }
     return "UNKNOWN";
+}
+
+LogLevel::Level LogLevel::FromString(const std::string& str) {
+#define XX(level, v) \
+    if(str == #v) { \
+        return LogLevel::level; \
+    }
+
+    XX(DEBUG, debug);
+    XX(INFO, info);
+    XX(WARN, warn);
+    XX(ERROR, error);
+    XX(FATAL, fatal);
+
+    XX(DEBUG, DEBUG);
+    XX(INFO, INFO);
+    XX(WARN, WARN);
+    XX(ERROR, ERROR);
+    XX(FATAL, FATAL);
+
+    return LogLevel::UNKNOW;
+#undef XX
 }
 
 /*-------------------------    FormatItem的实例  -------------------------*/
@@ -279,6 +302,7 @@ void LogFormatter::init() {
             i = n - 1;
         } else if(fmt_status == 1) {
             std::cout << "pattern parse error: " << m_pattern << " - " << m_pattern.substr(i) << std::endl;
+            m_error = true;
             vec.push_back(std::make_tuple("<<pattern_error>>", fmt, 0));
         } 
     }
@@ -325,6 +349,7 @@ void LogFormatter::init() {
             auto it = s_format_items.find(std::get<0>(i));
             if(it == s_format_items.end()) {
                 m_items.push_back(FormatItem::ptr(new StringFormatItem("<<error_format %" + std::get<0>(i) + ">>")));
+                m_error = true;
             } else {
                 m_items.push_back(it->second(std::get<1>(i)));
             }
@@ -351,6 +376,20 @@ void StdoutLogAppender::log(std::shared_ptr<Logger> logger, LogLevel::Level leve
     }
 }
 
+std::string StdoutLogAppender::toYamlString() {
+    YAML::Node node;
+    node["type"] = "StdoutAppender";
+    if(m_level != LogLevel::UNKNOW) {
+       node["level"] = LogLevel::ToString(m_level); 
+    }
+    if(m_formatter) {
+        node["formatter"] = m_formatter->getPattern();
+    }
+    std::stringstream ss;
+    ss << node;
+    return ss.str();
+}
+
 
 /*----------   FileLogAppender  ----------*/
 FileLogAppender::FileLogAppender(const std::string& filename) 
@@ -358,6 +397,20 @@ FileLogAppender::FileLogAppender(const std::string& filename)
     reopen();
 }
 
+std::string FileLogAppender::toYamlString() {
+    YAML::Node node;
+    node["type"] = "FileLogAppender";
+    node["file"] = m_filename;
+    if(m_level != LogLevel::UNKNOW) {
+       node["level"] = LogLevel::ToString(m_level); 
+    }
+    if(m_formatter) {
+        node["formatter"] = m_formatter->getPattern();
+    }
+    std::stringstream ss;
+    ss << node;
+    return ss.str();
+}
 
 
 void FileLogAppender::log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) {
@@ -383,6 +436,25 @@ Logger::Logger(const std::string& name)
         m_formatter.reset(new LogFormatter("%d{%Y-%m-%d %H:%M:%S}%T%t%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"));
     }
 
+void Logger::setFormatter(LogFormatter::ptr val) {
+    m_formatter = val;
+}
+
+void Logger::setFormatter(const std::string& val) {
+    sylar::LogFormatter::ptr new_val(new sylar::LogFormatter(val));
+    if(new_val->isError()){
+        std::cout << " Logger set Formatter name= " << m_name
+                  << " value=" << val << " invalid formatter"
+                  << std::endl; 
+        return;
+    }
+    m_formatter = new_val;
+}
+
+LogFormatter::ptr Logger::getFormatter() {
+    return m_formatter;
+}
+
 void Logger::addAppender(LogAppender::ptr appender){
     //增加Appender时如果Appender没有Formatter,就把logger本身的Formatter给他
     if(!appender->getFormatter()) {
@@ -402,6 +474,9 @@ void Logger::delAppender(LogAppender::ptr appender) {
     }
 }
 
+void Logger::clearAppenders() {
+    m_appenders.clear();
+}
 
 void Logger::log(LogLevel::Level level, LogEvent::ptr event) {
     if(level >= m_level){
@@ -437,11 +512,32 @@ void Logger::fatal(LogEvent::ptr event){
     log(LogLevel::FATAL, event);
 }
 
+std::string Logger::toYamlString() {
+    YAML::Node node;
+    node["name"] = m_name;
+    if(m_level != LogLevel::UNKNOW) {
+       node["level"] = LogLevel::ToString(m_level); 
+    }
+    if(m_formatter) {
+        node["formatter"] = m_formatter->getPattern();        
+    }
+
+    for(auto& i : m_appenders) {
+        node["appenders"].push_back(YAML::Load(i->toYamlString()));
+    }
+    std::stringstream ss;
+    ss << node;
+    return ss.str();
+
+}
+
 
 /*----------  LoggerManager  ----------*/
 LoggerManager::LoggerManager() {
     m_root.reset(new Logger);
     m_root->addAppender(LogAppender::ptr(new StdoutLogAppender));
+
+    m_loggers[m_root->m_name] = m_root;
 
     init();
 }
@@ -458,6 +554,16 @@ Logger::ptr LoggerManager::getLogger(const std::string& name) {
     logger->m_root = m_root;
     m_loggers[name] = logger;
     return logger;
+}
+
+std::string LoggerManager::toYamlString() {
+    YAML::Node node;
+    for(auto& i : m_loggers) {
+        node.push_back(YAML::Load(i.second->toYamlString()));
+    }
+    std::stringstream ss;
+    ss << node;
+    return ss.str();
 }
 
 void LoggerManager::init() {

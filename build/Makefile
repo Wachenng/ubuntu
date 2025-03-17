@@ -182,6 +182,30 @@ sylar/config.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/config.cc.s
 .PHONY : sylar/config.cc.s
 
+sylar/config_log.o: sylar/config_log.cc.o
+.PHONY : sylar/config_log.o
+
+# target to build an object file
+sylar/config_log.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/config_log.cc.o
+.PHONY : sylar/config_log.cc.o
+
+sylar/config_log.i: sylar/config_log.cc.i
+.PHONY : sylar/config_log.i
+
+# target to preprocess a source file
+sylar/config_log.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/config_log.cc.i
+.PHONY : sylar/config_log.cc.i
+
+sylar/config_log.s: sylar/config_log.cc.s
+.PHONY : sylar/config_log.s
+
+# target to generate assembly for a file
+sylar/config_log.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/config_log.cc.s
+.PHONY : sylar/config_log.cc.s
+
 sylar/log.o: sylar/log.cc.o
 .PHONY : sylar/log.o
 
@@ -292,6 +316,9 @@ help:
 	@echo "... sylar/config.o"
 	@echo "... sylar/config.i"
 	@echo "... sylar/config.s"
+	@echo "... sylar/config_log.o"
+	@echo "... sylar/config_log.i"
+	@echo "... sylar/config_log.s"
 	@echo "... sylar/log.o"
 	@echo "... sylar/log.i"
 	@echo "... sylar/log.s"

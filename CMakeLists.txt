@@ -13,6 +13,7 @@ set(LIB_SRC
    sylar/log.cc
    sylar/util.cc
    sylar/config.cc
+   sylar/config_log.cc
    )
 
 add_library(sylar SHARED ${LIB_SRC})
