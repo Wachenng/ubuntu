@@ -365,7 +365,14 @@ void LogFormatter::init() {
 
 
 /*********************************  LogAppender  *********************************/
-
+void LogAppender::setFormatter(LogFormatter::ptr val) {
+    m_formatter = val;
+    if(m_formatter) {
+        m_hasFormat = true;
+    } else {
+        m_hasFormat = false;
+    }
+}
 
 
 
@@ -382,7 +389,7 @@ std::string StdoutLogAppender::toYamlString() {
     if(m_level != LogLevel::UNKNOW) {
        node["level"] = LogLevel::ToString(m_level); 
     }
-    if(m_formatter) {
+    if(m_hasFormat && m_formatter) {
         node["formatter"] = m_formatter->getPattern();
     }
     std::stringstream ss;
@@ -404,7 +411,7 @@ std::string FileLogAppender::toYamlString() {
     if(m_level != LogLevel::UNKNOW) {
        node["level"] = LogLevel::ToString(m_level); 
     }
-    if(m_formatter) {
+    if(m_hasFormat && m_formatter) {
         node["formatter"] = m_formatter->getPattern();
     }
     std::stringstream ss;
@@ -438,6 +445,12 @@ Logger::Logger(const std::string& name)
 
 void Logger::setFormatter(LogFormatter::ptr val) {
     m_formatter = val;
+
+    for(auto& i : m_appenders) {
+        if(!i->m_hasFormat) {
+            i->m_formatter = m_formatter;
+        }
+    }
 }
 
 void Logger::setFormatter(const std::string& val) {
@@ -448,7 +461,8 @@ void Logger::setFormatter(const std::string& val) {
                   << std::endl; 
         return;
     }
-    m_formatter = new_val;
+    //m_formatter = new_val;
+    setFormatter(new_val);
 }
 
 LogFormatter::ptr Logger::getFormatter() {
@@ -458,7 +472,7 @@ LogFormatter::ptr Logger::getFormatter() {
 void Logger::addAppender(LogAppender::ptr appender){
     //增加Appender时如果Appender没有Formatter,就把logger本身的Formatter给他
     if(!appender->getFormatter()) {
-        appender->setFormatter(m_formatter);
+        appender->m_formatter = m_formatter;
     }
     m_appenders.push_back(appender);
 }

@@ -188,6 +188,14 @@ struct LogIniter {
                         ap.reset(new StdoutLogAppender);
                     }
                     ap->setLevel(a.level);
+                    if(!a.formatter.empty()){
+                        LogFormatter::ptr fmt(new LogFormatter(a.formatter));
+                        if(!fmt->isError()){
+                            ap->setFormatter(fmt);
+                        }else {
+                            std::cout << "log.name = " << i.name << " appender type="  << a.type << " formatter" << a.formatter << " is invalid" << std::endl;
+                        }
+                    }
                     logger->addAppender(ap);
                 }
             }
