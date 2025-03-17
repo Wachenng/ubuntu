@@ -119,6 +119,12 @@ public:
            << "]";
         return ss.str(); 
     }
+
+    bool operator==(const Person& oth) const {
+        return m_name == oth.m_name
+            && m_age == oth.m_age
+            && m_sex == oth.m_sex;
+    }
 };
 
 //自定义类型的片特化
@@ -175,6 +181,12 @@ void test_class() {
 
     XX_PM(g_person_map, "class.map before");
     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_person_vec_map->toString();
+
+    /* 监听变更事件 -- 观察者模式*/
+    g_person->addListener(10, [](const Person& old_value, const Person& new_value){
+        SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << " old_value=" << old_value.toString()
+            << " new_value=" << new_value.toString();
+    });
 
     YAML::Node root = YAML::LoadFile("/home/ubuntu/server/bin/conf/log.yml");
     sylar::Config::LoadFromYaml(root);

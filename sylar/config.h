@@ -4,6 +4,7 @@
 #include <memory>
 #include <string>
 #include <sstream>
+#include <functional>
 #include <boost/lexical_cast.hpp>
 #include <yaml-cpp/yaml.h>
 #include "log.h"
@@ -262,6 +263,9 @@ class ConfigVar : public ConfigVarBase {
 public:
     typedef std::shared_ptr<ConfigVar> ptr;
 
+    //当配置发生变化时,让代码感知到的回调函数--让其知道原来的值以及新的值
+    typedef std::function<void (const T& old_value, const T& new_value)> on_change_cb;
+
     ConfigVar(const std::string& name
             ,const T& default_value
             ,const std::string& description = "")
@@ -292,10 +296,41 @@ public:
     }
 
     const T getValue() const { return m_val;}
-    void setValue(const T& v) {m_val = v;}
+
+    void setValue(const T& v) {
+        //新旧值没变化直接返回
+        if(v == m_val) {
+            return;
+        }
+        //如果不是,执行回调
+        for(auto& i : m_cbs) {
+            i.second(m_val, v);
+        }
+        m_val = v;
+    }
     std::string getTypeName() const override { return typeid(T).name();}
+
+    void addListener(uint64_t key, on_change_cb cb) {
+        m_cbs[key] = cb;
+    }
+
+    void delListener(uint64_t key) {
+        m_cbs.erase(key);
+    }
+
+    void clearListener() {
+        m_cbs.clear();
+    }
+
+    on_change_cb getListener(uint64_t key) {
+        auto it = m_cbs.find(key);
+        return it == m_cbs.end() ? nullptr : it->second;
+    }
+
 private:
     T m_val;
+    //变更回调函数组, uint64_t key 要求唯一, 一般用hash
+    std::map<uint64_t, on_change_cb> m_cbs;
 };
 
 //模板子类继承非模板父类
