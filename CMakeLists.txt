@@ -17,6 +17,7 @@ set(LIB_SRC
    sylar/config.cc
    sylar/config_log.cc
    sylar/thread.cc
+   sylar/mutex.cc
    )
 
 add_library(sylar SHARED ${LIB_SRC})

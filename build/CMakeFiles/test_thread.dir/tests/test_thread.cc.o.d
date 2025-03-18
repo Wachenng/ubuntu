@@ -150,6 +150,8 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
+ /home/ubuntu/server/./sylar/mutex.h /usr/include/semaphore.h \
+ /usr/include/x86_64-linux-gnu/bits/semaphore.h \
  /home/ubuntu/server/./sylar/log.h /usr/include/c++/11/list \
  /usr/include/c++/11/bits/stl_list.h /usr/include/c++/11/bits/list.tcc \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
@@ -202,4 +204,5 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/ubuntu/server/./sylar/singleton.h
+ /home/ubuntu/server/./sylar/singleton.h \
+ /home/ubuntu/server/./sylar/mutex.h

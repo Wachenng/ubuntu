@@ -7,6 +7,8 @@
 #include <pthread.h>
 #include <string>
 
+#include "mutex.h"
+
 namespace sylar {
 
 class Thread {
@@ -40,6 +42,8 @@ private:
     pthread_t m_thread = 0;
     std::function<void()> m_cb;
     std::string m_name;
+
+    Semaphore m_semaphore;
 };
 
 }
