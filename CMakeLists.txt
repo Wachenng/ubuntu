@@ -41,6 +41,10 @@ add_dependencies(test_thread sylar)
 force_redefine_file_macro_for_sources(test_thread) #__FILE__
 target_link_libraries(test_thread sylar yaml-cpp)
 
+add_executable(test_util tests/test_util.cc)
+add_dependencies(test_util sylar)
+force_redefine_file_macro_for_sources(test_util) #__FILE__
+target_link_libraries(test_util sylar yaml-cpp)
 
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

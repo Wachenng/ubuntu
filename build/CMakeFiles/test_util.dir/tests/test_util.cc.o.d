@@ -1,14 +1,15 @@
-CMakeFiles/sylar.dir/sylar/util.cc.o: /home/ubuntu/server/sylar/util.cc \
- /usr/include/stdc-predef.h /home/ubuntu/server/sylar/util.h \
- /usr/include/pthread.h /usr/include/features.h \
+CMakeFiles/test_util.dir/tests/test_util.cc.o: \
+ /home/ubuntu/server/tests/test_util.cc /usr/include/stdc-predef.h \
+ /usr/include/assert.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/timesize.h \
  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h /usr/include/sched.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /home/ubuntu/server/./sylar/util.h /usr/include/pthread.h \
+ /usr/include/sched.h /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
  /usr/include/x86_64-linux-gnu/bits/time64.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
@@ -146,8 +147,8 @@ CMakeFiles/sylar.dir/sylar/util.cc.o: /home/ubuntu/server/sylar/util.cc \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
- /usr/include/c++/11/bits/basic_string.tcc /usr/include/execinfo.h \
- /home/ubuntu/server/sylar/log.h /usr/include/c++/11/memory \
+ /usr/include/c++/11/bits/basic_string.tcc \
+ /home/ubuntu/server/./sylar/log.h /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
@@ -196,7 +197,8 @@ CMakeFiles/sylar.dir/sylar/util.cc.o: /home/ubuntu/server/sylar/util.cc \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/string.h \
- /usr/include/strings.h /home/ubuntu/server/sylar/singleton.h \
- /home/ubuntu/server/sylar/mutex.h /usr/include/semaphore.h \
+ /usr/include/strings.h /home/ubuntu/server/./sylar/util.h \
+ /home/ubuntu/server/./sylar/singleton.h \
+ /home/ubuntu/server/./sylar/mutex.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /usr/include/c++/11/atomic
+ /usr/include/c++/11/atomic /home/ubuntu/server/./sylar/macro.h
