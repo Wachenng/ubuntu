@@ -885,9 +885,9 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: ../tests/test_thread.cc \
   /usr/local/include/yaml-cpp/node/detail/impl.h \
   /usr/local/include/yaml-cpp/node/parse.h \
   /usr/local/include/yaml-cpp/node/emit.h \
-  ../sylar/log.h \
   /usr/include/c++/11/unordered_set \
   /usr/include/c++/11/bits/unordered_set.h \
+  ../sylar/log.h \
   ../sylar/mutex.h
 
 
