@@ -1,5 +1,6 @@
 #include "sylar/thread.h"
 #include "sylar/log.h"
+#include "sylar/config.h"
 #include "sylar/mutex.h"
 #include <unistd.h>
 
@@ -7,7 +8,7 @@ sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 
 int count = 0;
 
-sylar::RWMutex s_mutex;
+sylar::Mutex s_mutex;
 
 void fun1() {
     SYLAR_LOG_INFO(g_logger) << "name: " << sylar::Thread::GetName()
@@ -16,26 +17,42 @@ void fun1() {
                              << " this.id: " << sylar::Thread::GetThis()->getId();
     
     for(int i = 0; i < 100000; i++) {
-        sylar::RWMutex::WriteLock lock(s_mutex);
+        sylar::Mutex::Lock lock(s_mutex);
         ++count;
     }
 }
 
 void fun2() {
-    SYLAR_LOG_INFO(g_logger) << "thread test begin";
+    while(true) {
+        SYLAR_LOG_INFO(g_logger) << "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    }
+    
+}
+
+void fun3() {
+    while(true) {
+        SYLAR_LOG_INFO(g_logger) << "============================================";
+    }
+    
 }
 
 
 int main(int argc, char** argv) {
     SYLAR_LOG_INFO(g_logger) << "thread test begin";
+
+    YAML::Node root = YAML::LoadFile("/home/ubuntu/server/bin/conf/log2.yml");
+    sylar::Config::LoadFromYaml(root);
+
     std::vector<sylar::Thread::ptr> thrs;
     //构造线程
-    for(int i = 0; i < 5; ++i) {
-        sylar::Thread::ptr thr(new sylar::Thread(&fun1, "name_" + std::to_string(i)));
+    for(int i = 0; i < 2; ++i) {
+        sylar::Thread::ptr thr(new sylar::Thread(&fun2, "name_" + std::to_string(i * 2)));
+        sylar::Thread::ptr thr2(new sylar::Thread(&fun3, "name_" + std::to_string(i * 2 + 1)));
         thrs.push_back(thr);
+        thrs.push_back(thr2);
     }
 
-    for(int i = 0; i < 5; ++i) {
+    for(size_t i = 0; i < thrs.size(); ++i) {
         thrs[i]->join();
     }
 

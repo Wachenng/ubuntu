@@ -875,6 +875,9 @@ CMakeFiles/sylar.dir/sylar/config.cc.o: ../sylar/config.cc \
   /usr/include/x86_64-linux-gnu/bits/syscall.h \
   /usr/include/zconf.h \
   ../sylar/singleton.h \
+  ../sylar/mutex.h \
+  /usr/include/semaphore.h \
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
   /usr/include/c++/11/unordered_set \
   /usr/include/c++/11/bits/unordered_set.h
 
@@ -1123,6 +1126,9 @@ CMakeFiles/sylar.dir/sylar/config_log.cc.o: ../sylar/config_log.cc \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   ../sylar/singleton.h \
+  ../sylar/mutex.h \
+  /usr/include/semaphore.h \
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
   ../sylar/config.h \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/std_function.h \
@@ -2001,6 +2007,9 @@ CMakeFiles/sylar.dir/sylar/log.cc.o: ../sylar/log.cc \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   ../sylar/singleton.h \
+  ../sylar/mutex.h \
+  /usr/include/semaphore.h \
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/std_function.h \
@@ -2620,15 +2629,15 @@ CMakeFiles/sylar.dir/sylar/util.cc.o: ../sylar/util.cc \
 
 /usr/include/c++/11/bits/this_thread_sleep.h:
 
-/usr/include/semaphore.h:
-
-../sylar/mutex.h:
-
 ../sylar/mutex.cc:
 
 ../sylar/config_log.cc:
 
 /usr/include/c++/11/unordered_set:
+
+/usr/include/semaphore.h:
+
+../sylar/mutex.h:
 
 /usr/include/x86_64-linux-gnu/bits/syscall.h:
 

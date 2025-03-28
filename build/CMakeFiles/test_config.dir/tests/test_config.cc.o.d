@@ -771,6 +771,8 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
  /usr/include/x86_64-linux-gnu/bits/syscall.h /usr/include/zconf.h \
  /home/ubuntu/server/./sylar/singleton.h \
+ /home/ubuntu/server/./sylar/mutex.h /usr/include/semaphore.h \
+ /usr/include/x86_64-linux-gnu/bits/semaphore.h \
  /usr/include/c++/11/unordered_set \
  /usr/include/c++/11/bits/unordered_set.h \
  /home/ubuntu/server/./sylar/log.h \

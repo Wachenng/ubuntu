@@ -247,6 +247,9 @@ CMakeFiles/test.dir/tests/test.cc.o: ../tests/test.cc \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   ../sylar/singleton.h \
+  ../sylar/mutex.h \
+  /usr/include/semaphore.h \
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
   ../sylar/util.h
 
 
@@ -333,6 +336,8 @@ CMakeFiles/test.dir/tests/test.cc.o: ../tests/test.cc \
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
 /usr/include/c++/11/bits/streambuf_iterator.h:
+
+../sylar/mutex.h:
 
 /usr/include/c++/11/cwctype:
 
@@ -441,6 +446,8 @@ CMakeFiles/test.dir/tests/test.cc.o: ../tests/test.cc \
 /usr/include/c++/11/typeinfo:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/usr/include/semaphore.h:
 
 /usr/include/c++/11/bits/exception_defines.h:
 
@@ -585,6 +592,8 @@ CMakeFiles/test.dir/tests/test.cc.o: ../tests/test.cc \
 /usr/include/c++/11/bits/exception_ptr.h:
 
 /usr/include/c++/11/ext/string_conversions.h:
+
+/usr/include/x86_64-linux-gnu/bits/semaphore.h:
 
 /usr/include/c++/11/exception:
 

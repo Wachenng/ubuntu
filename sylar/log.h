@@ -13,6 +13,7 @@
 #include <string.h>
 #include "util.h"
 #include "singleton.h"
+#include "mutex.h"
 
 
 /*********************************  宏定义  *********************************/
@@ -155,6 +156,7 @@ class LogAppender {
 friend class Logger; 
 public:
     typedef std::shared_ptr<LogAppender> ptr;
+    typedef Mutex MutexType;
     virtual ~LogAppender() {}
 
     virtual void log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) = 0;
@@ -162,7 +164,7 @@ public:
     virtual std::string toYamlString() = 0;
 
     void setFormatter(LogFormatter::ptr val);
-    LogFormatter::ptr getFormatter() const { return m_formatter;}
+    LogFormatter::ptr getFormatter();
 
     void setLevel(LogLevel::Level level) { m_level = level;}
     LogLevel::Level getLevel() const { return m_level;}
@@ -171,6 +173,7 @@ protected:
     LogLevel::Level m_level = LogLevel::DEBUG;
     bool m_hasFormat = false;
     LogFormatter::ptr m_formatter;
+    MutexType m_mutex;
 };
 
 
@@ -180,6 +183,7 @@ class Logger : public std::enable_shared_from_this<Logger> {
 friend class LoggerManager;
 public:
     typedef std::shared_ptr<Logger> ptr;
+    typedef Mutex MutexType;
 
     Logger(const std::string& name = "root");
     const std::string& getName() const { return m_name;}
@@ -211,6 +215,8 @@ private:
     std::list<LogAppender::ptr> m_appenders;
     LogFormatter::ptr m_formatter;
     Logger::ptr m_root;
+
+    MutexType m_mutex;
 };
 
 /**********   StdoutLogAppender  **********/
@@ -242,6 +248,7 @@ private:
 /*----------  LoggerManager  ----------*/
 class LoggerManager {
 public:
+    typedef Mutex MutexType;
     LoggerManager();
     Logger::ptr getLogger(const std::string& name);
 
@@ -254,6 +261,8 @@ public:
 private:
     std::map<std::string, Logger::ptr> m_loggers;
     Logger::ptr m_root;
+
+    MutexType m_mutex;
 };
 
 typedef sylar::Singleton<LoggerManager> LoggerMgr;

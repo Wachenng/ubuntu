@@ -198,8 +198,10 @@ CMakeFiles/sylar.dir/sylar/log.cc.o: /home/ubuntu/server/sylar/log.cc \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/ubuntu/server/sylar/singleton.h /usr/include/c++/11/iostream \
- /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
+ /home/ubuntu/server/sylar/singleton.h /home/ubuntu/server/sylar/mutex.h \
+ /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+ /usr/include/c++/11/iostream /usr/include/c++/11/functional \
+ /usr/include/c++/11/bits/std_function.h \
  /usr/local/include/yaml-cpp/yaml.h /usr/local/include/yaml-cpp/parser.h \
  /usr/local/include/yaml-cpp/dll.h /usr/local/include/yaml-cpp/emitter.h \
  /usr/include/c++/11/cmath /usr/include/math.h \

@@ -875,6 +875,9 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: ../tests/test_config.cc \
   /usr/include/x86_64-linux-gnu/bits/syscall.h \
   /usr/include/zconf.h \
   ../sylar/singleton.h \
+  ../sylar/mutex.h \
+  /usr/include/semaphore.h \
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
   /usr/include/c++/11/unordered_set \
   /usr/include/c++/11/bits/unordered_set.h \
   ../sylar/log.h \
@@ -883,6 +886,10 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: ../tests/test_config.cc \
 
 
 /usr/include/c++/11/unordered_set:
+
+/usr/include/semaphore.h:
+
+../sylar/mutex.h:
 
 /usr/include/x86_64-linux-gnu/bits/syscall.h:
 
@@ -2025,6 +2032,8 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: ../tests/test_config.cc \
 /usr/include/c++/11/bits/allocated_ptr.h:
 
 /usr/include/c++/11/bits/refwrap.h:
+
+/usr/include/x86_64-linux-gnu/bits/semaphore.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 

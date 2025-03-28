@@ -125,6 +125,45 @@ private:
     bool m_locked;
 };
 
+class Mutex {
+public:
+    typedef ScopeLockImpl<Mutex> Lock;
+
+    Mutex() {
+        pthread_mutex_init(&m_mutex, nullptr);
+    }
+
+    ~Mutex() {
+        pthread_mutex_destroy(&m_mutex);
+    }
+
+    void lock() {
+        pthread_mutex_lock(&m_mutex);
+    }
+
+    void unlock() {
+        pthread_mutex_unlock(&m_mutex);
+    }
+
+private:
+    pthread_mutex_t m_mutex;
+};
+
+
+class NullMutex {
+public:
+    typedef ScopeLockImpl<NullMutex> Lock;
+
+    NullMutex() {}
+
+    ~NullMutex() {}
+
+    void lock() {}
+
+    void unlock() {}
+
+};
+
 
 class RWMutex {
 public:
@@ -152,6 +191,23 @@ public:
     }
 private:
     pthread_rwlock_t m_lock;
+};
+
+
+class NullRWMutex {
+public:
+    typedef ReadScopeLockImpl<NullRWMutex> ReadLock;
+    typedef WriteScopeLockImpl<NullRWMutex> WriteLock;
+
+    NullRWMutex() {}
+
+    ~NullRWMutex() {}
+
+    void rdlock() {}
+
+    void wrlock() {}
+
+    void unlock() {}
 };
 
 } // namespace sylar
