@@ -152,10 +152,10 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: \
  /usr/include/c++/11/bits/basic_string.tcc \
  /home/ubuntu/server/./sylar/mutex.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /home/ubuntu/server/./sylar/log.h /usr/include/c++/11/list \
- /usr/include/c++/11/bits/stl_list.h /usr/include/c++/11/bits/list.tcc \
- /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
- /usr/include/c++/11/bits/stl_map.h \
+ /usr/include/c++/11/atomic /home/ubuntu/server/./sylar/log.h \
+ /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
+ /usr/include/c++/11/bits/list.tcc /usr/include/c++/11/map \
+ /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/sstream \
  /usr/include/c++/11/istream /usr/include/c++/11/ios \
@@ -761,7 +761,7 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: \
  /usr/local/include/yaml-cpp/node/detail/node_iterator.h \
  /usr/local/include/yaml-cpp/node/iterator.h \
  /usr/local/include/yaml-cpp/node/detail/iterator.h \
- /usr/include/c++/11/atomic /usr/local/include/yaml-cpp/node/convert.h \
+ /usr/local/include/yaml-cpp/node/convert.h \
  /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
  /usr/include/c++/11/bits/hashtable_policy.h \
  /usr/include/c++/11/bits/enable_special_members.h \

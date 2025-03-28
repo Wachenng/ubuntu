@@ -198,4 +198,4 @@ CMakeFiles/test.dir/tests/test.cc.o: /home/ubuntu/server/tests/test.cc \
  /home/ubuntu/server/tests/../sylar/singleton.h \
  /home/ubuntu/server/tests/../sylar/mutex.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /home/ubuntu/server/tests/../sylar/util.h
+ /usr/include/c++/11/atomic /home/ubuntu/server/tests/../sylar/util.h

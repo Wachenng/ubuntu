@@ -251,5 +251,6 @@ CMakeFiles/test.dir/tests/test.cc.o
  /home/ubuntu/server/sylar/mutex.h
  /usr/include/semaphore.h
  /usr/include/x86_64-linux-gnu/bits/semaphore.h
+ /usr/include/c++/11/atomic
  /home/ubuntu/server/sylar/util.h
 

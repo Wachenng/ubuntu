@@ -200,8 +200,8 @@ CMakeFiles/sylar.dir/sylar/config_log.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /home/ubuntu/server/sylar/singleton.h /home/ubuntu/server/sylar/mutex.h \
  /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /home/ubuntu/server/sylar/config.h /usr/include/c++/11/functional \
- /usr/include/c++/11/bits/std_function.h \
+ /usr/include/c++/11/atomic /home/ubuntu/server/sylar/config.h \
+ /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
  /usr/include/boost/lexical_cast.hpp /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
@@ -758,7 +758,7 @@ CMakeFiles/sylar.dir/sylar/config_log.cc.o: \
  /usr/local/include/yaml-cpp/node/detail/node_iterator.h \
  /usr/local/include/yaml-cpp/node/iterator.h \
  /usr/local/include/yaml-cpp/node/detail/iterator.h \
- /usr/include/c++/11/atomic /usr/local/include/yaml-cpp/node/convert.h \
+ /usr/local/include/yaml-cpp/node/convert.h \
  /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
  /usr/include/c++/11/bits/hashtable_policy.h \
  /usr/include/c++/11/bits/enable_special_members.h \

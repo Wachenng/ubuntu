@@ -242,6 +242,8 @@ public:
 private:
     std::string m_filename;
     std::ofstream m_filestream;
+    //用于感知文件是否删除
+    uint64_t m_lastTime = 0;
 };
 
 

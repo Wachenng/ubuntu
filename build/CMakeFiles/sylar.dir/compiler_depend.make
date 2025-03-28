@@ -1129,6 +1129,7 @@ CMakeFiles/sylar.dir/sylar/config_log.cc.o: ../sylar/config_log.cc \
   ../sylar/mutex.h \
   /usr/include/semaphore.h \
   /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+  /usr/include/c++/11/atomic \
   ../sylar/config.h \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/std_function.h \
@@ -1738,7 +1739,6 @@ CMakeFiles/sylar.dir/sylar/config_log.cc.o: ../sylar/config_log.cc \
   /usr/local/include/yaml-cpp/node/detail/node_iterator.h \
   /usr/local/include/yaml-cpp/node/iterator.h \
   /usr/local/include/yaml-cpp/node/detail/iterator.h \
-  /usr/include/c++/11/atomic \
   /usr/local/include/yaml-cpp/node/convert.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
@@ -2010,6 +2010,7 @@ CMakeFiles/sylar.dir/sylar/log.cc.o: ../sylar/log.cc \
   ../sylar/mutex.h \
   /usr/include/semaphore.h \
   /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+  /usr/include/c++/11/atomic \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/std_function.h \
@@ -2060,7 +2061,6 @@ CMakeFiles/sylar.dir/sylar/log.cc.o: ../sylar/log.cc \
   /usr/include/c++/11/bits/stream_iterator.h \
   /usr/local/include/yaml-cpp/node/iterator.h \
   /usr/local/include/yaml-cpp/node/detail/iterator.h \
-  /usr/include/c++/11/atomic \
   /usr/local/include/yaml-cpp/node/convert.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
@@ -2146,10 +2146,15 @@ CMakeFiles/sylar.dir/sylar/mutex.cc.o: ../sylar/mutex.cc \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/atomic \
+  /usr/include/c++/11/bits/atomic_base.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/11/bits/move.h \
+  /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/iostream \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \
   /usr/include/c++/11/iosfwd \
@@ -2174,8 +2179,6 @@ CMakeFiles/sylar.dir/sylar/mutex.cc.o: ../sylar/mutex.cc \
   /usr/include/c++/11/typeinfo \
   /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/new \
-  /usr/include/c++/11/bits/move.h \
-  /usr/include/c++/11/type_traits \
   /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/bits/stl_algobase.h \
@@ -2457,6 +2460,7 @@ CMakeFiles/sylar.dir/sylar/thread.cc.o: ../sylar/thread.cc \
   ../sylar/mutex.h \
   /usr/include/semaphore.h \
   /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+  /usr/include/c++/11/atomic \
   ../sylar/log.h \
   /usr/include/c++/11/list \
   /usr/include/c++/11/bits/stl_list.h \

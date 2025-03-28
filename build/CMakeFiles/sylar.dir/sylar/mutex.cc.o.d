@@ -50,12 +50,15 @@ CMakeFiles/sylar.dir/sylar/mutex.cc.o: /home/ubuntu/server/sylar/mutex.cc \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
- /usr/include/c++/11/iostream \
+ /usr/include/c++/11/atomic /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
- /usr/include/c++/11/ostream /usr/include/c++/11/ios \
- /usr/include/c++/11/iosfwd /usr/include/c++/11/bits/stringfwd.h \
+ /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/11/bits/move.h /usr/include/c++/11/type_traits \
+ /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
+ /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
+ /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/memoryfwd.h /usr/include/c++/11/bits/postypes.h \
  /usr/include/c++/11/cwchar /usr/include/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
@@ -71,9 +74,7 @@ CMakeFiles/sylar.dir/sylar/mutex.cc.o: /home/ubuntu/server/sylar/mutex.cc \
  /usr/include/c++/11/bits/exception_defines.h \
  /usr/include/c++/11/bits/cxxabi_init_exception.h \
  /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/hash_bytes.h \
- /usr/include/c++/11/new /usr/include/c++/11/bits/move.h \
- /usr/include/c++/11/type_traits \
- /usr/include/c++/11/bits/nested_exception.h \
+ /usr/include/c++/11/new /usr/include/c++/11/bits/nested_exception.h \
  /usr/include/c++/11/bits/char_traits.h \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/c++/11/bits/functexcept.h \

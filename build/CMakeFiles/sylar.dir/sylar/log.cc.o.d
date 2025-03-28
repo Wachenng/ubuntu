@@ -200,8 +200,8 @@ CMakeFiles/sylar.dir/sylar/log.cc.o: /home/ubuntu/server/sylar/log.cc \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /home/ubuntu/server/sylar/singleton.h /home/ubuntu/server/sylar/mutex.h \
  /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /usr/include/c++/11/iostream /usr/include/c++/11/functional \
- /usr/include/c++/11/bits/std_function.h \
+ /usr/include/c++/11/atomic /usr/include/c++/11/iostream \
+ /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
  /usr/local/include/yaml-cpp/yaml.h /usr/local/include/yaml-cpp/parser.h \
  /usr/local/include/yaml-cpp/dll.h /usr/local/include/yaml-cpp/emitter.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
@@ -242,7 +242,7 @@ CMakeFiles/sylar.dir/sylar/log.cc.o: /home/ubuntu/server/sylar/log.cc \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
  /usr/local/include/yaml-cpp/node/iterator.h \
  /usr/local/include/yaml-cpp/node/detail/iterator.h \
- /usr/include/c++/11/atomic /usr/local/include/yaml-cpp/node/convert.h \
+ /usr/local/include/yaml-cpp/node/convert.h \
  /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
  /usr/include/c++/11/bits/hashtable_policy.h \
  /usr/include/c++/11/bits/enable_special_members.h \
