@@ -1,6 +1,15 @@
 #ifndef __SYLAR__FIBER_H__
 #define __SYLAR__FIBER_H__
 
+/*
+Thread->main_fiber <--------------> sub_fiber
+            ^
+            |
+            v
+         sub_fiber
+*/
+
+
 #include <memory>
 #include <functional>
 #include <ucontext.h>
@@ -35,6 +44,7 @@ public:
     void swapIn();
     // 切换到后台执行
     void swapOut();
+    uint64_t getId() const { return m_id;}
 
 public:
     //设置当前协程
@@ -49,6 +59,7 @@ public:
     static uint64_t TotalFibers();
 
     static void MainFunc();
+    static uint64_t GetFiberId();
 
 private:
     uint64_t m_id = 0;

@@ -18,6 +18,7 @@ set(LIB_SRC
    sylar/config_log.cc
    sylar/thread.cc
    sylar/mutex.cc
+   sylar/fiber.cc
    )
 
 add_library(sylar SHARED ${LIB_SRC})
@@ -46,6 +47,11 @@ add_dependencies(test_util sylar)
 force_redefine_file_macro_for_sources(test_util) #__FILE__
 target_link_libraries(test_util sylar yaml-cpp)
 
+
+add_executable(test_fiber tests/test_fiber.cc)
+add_dependencies(test_fiber sylar)
+force_redefine_file_macro_for_sources(test_fiber) #__FILE__
+target_link_libraries(test_fiber sylar yaml-cpp)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

@@ -3,5 +3,6 @@
 /home/ubuntu/server/build/CMakeFiles/test_config.dir
 /home/ubuntu/server/build/CMakeFiles/test_thread.dir
 /home/ubuntu/server/build/CMakeFiles/test_util.dir
+/home/ubuntu/server/build/CMakeFiles/test_fiber.dir
 /home/ubuntu/server/build/CMakeFiles/edit_cache.dir
 /home/ubuntu/server/build/CMakeFiles/rebuild_cache.dir
