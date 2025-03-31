@@ -4,7 +4,7 @@ project(sylar)
 include (cmake/utils.cmake)
 
 set(CMAKE_VERBOSE_MAKEFILE ON)
-set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined")
+set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-sign-compare")
 
 include_directories(.)
 include_directories(/usr/local/include)
@@ -53,6 +53,11 @@ add_executable(test_fiber tests/test_fiber.cc)
 add_dependencies(test_fiber sylar)
 force_redefine_file_macro_for_sources(test_fiber) #__FILE__
 target_link_libraries(test_fiber sylar yaml-cpp)
+
+add_executable(test_scheduler tests/test_scheduler.cc)
+add_dependencies(test_scheduler sylar)
+force_redefine_file_macro_for_sources(test_scheduler) #__FILE__
+target_link_libraries(test_scheduler sylar yaml-cpp)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

@@ -781,4 +781,5 @@ CMakeFiles/sylar.dir/sylar/fiber.cc.o: /home/ubuntu/server/sylar/fiber.cc \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
  /usr/include/x86_64-linux-gnu/bits/syscall.h /usr/include/zconf.h \
- /home/ubuntu/server/sylar/singleton.h /home/ubuntu/server/sylar/macro.h
+ /home/ubuntu/server/sylar/singleton.h /home/ubuntu/server/sylar/macro.h \
+ /home/ubuntu/server/sylar/scheduler.h

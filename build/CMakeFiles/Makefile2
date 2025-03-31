@@ -72,6 +72,7 @@ all: CMakeFiles/test_config.dir/all
 all: CMakeFiles/test_thread.dir/all
 all: CMakeFiles/test_util.dir/all
 all: CMakeFiles/test_fiber.dir/all
+all: CMakeFiles/test_scheduler.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -85,6 +86,7 @@ clean: CMakeFiles/test_config.dir/clean
 clean: CMakeFiles/test_thread.dir/clean
 clean: CMakeFiles/test_util.dir/clean
 clean: CMakeFiles/test_fiber.dir/clean
+clean: CMakeFiles/test_scheduler.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -172,7 +174,7 @@ CMakeFiles/test_config.dir/clean:
 CMakeFiles/test_thread.dir/all: CMakeFiles/sylar.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/server/build/CMakeFiles --progress-num=16,17 "Built target test_thread"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/server/build/CMakeFiles --progress-num=18,19 "Built target test_thread"
 .PHONY : CMakeFiles/test_thread.dir/all
 
 # Build rule for subdir invocation for target.
@@ -198,7 +200,7 @@ CMakeFiles/test_thread.dir/clean:
 CMakeFiles/test_util.dir/all: CMakeFiles/sylar.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/server/build/CMakeFiles --progress-num=18,19 "Built target test_util"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/server/build/CMakeFiles --progress-num=20,21 "Built target test_util"
 .PHONY : CMakeFiles/test_util.dir/all
 
 # Build rule for subdir invocation for target.
@@ -242,6 +244,32 @@ test_fiber: CMakeFiles/test_fiber.dir/rule
 CMakeFiles/test_fiber.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/clean
 .PHONY : CMakeFiles/test_fiber.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_scheduler.dir
+
+# All Build rule for target.
+CMakeFiles/test_scheduler.dir/all: CMakeFiles/sylar.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/server/build/CMakeFiles --progress-num=16,17 "Built target test_scheduler"
+.PHONY : CMakeFiles/test_scheduler.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_scheduler.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/server/build/CMakeFiles 11
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_scheduler.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/server/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_scheduler.dir/rule
+
+# Convenience name for target.
+test_scheduler: CMakeFiles/test_scheduler.dir/rule
+.PHONY : test_scheduler
+
+# clean rule for target.
+CMakeFiles/test_scheduler.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/clean
+.PHONY : CMakeFiles/test_scheduler.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

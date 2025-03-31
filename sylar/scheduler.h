@@ -68,7 +68,7 @@ public:
         {
             MutexType::Lock lock(m_mutex);
             while(begin != end) {
-                need_tickle = scheduleNoLock(*begin) || need_tickle;
+                need_tickle = scheduleNoLock(&*begin) || need_tickle;
                 ++begin;
             }
         }
@@ -86,7 +86,7 @@ protected:
     void setThis();
 private:
     template<class FiberOrCb>
-    void scheduleNoLock(FiberOrCb fc, int thread){
+    bool scheduleNoLock(FiberOrCb fc, int thread){
         bool need_tickle = m_fibers.empty();
         FiberAndThread ft(fc, thread);
         if(ft.fiber || ft.cb) {

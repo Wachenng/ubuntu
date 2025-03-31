@@ -8,5 +8,5 @@ CXX_INCLUDES = -I/home/ubuntu/server/.
 
 CXX_FLAGS =  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-sign-compare
 
-# Custom defines: CMakeFiles/test_util.dir/tests/test_util.cc.o_DEFINES = __FILE__="tests/test_util.cc"
+# Custom defines: CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o_DEFINES = __FILE__="tests/test_scheduler.cc"
 

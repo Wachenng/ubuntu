@@ -19,7 +19,10 @@ Thread->main_fiber <--------------> sub_fiber
 
 namespace sylar{
 
+class Scheduler;
+
 class Fiber : public std::enable_shared_from_this<Fiber> {
+friend class Scheduler;
 public:
     typedef std::shared_ptr<Fiber> ptr;
 
@@ -45,7 +48,12 @@ public:
     void swapIn();
     // 切换到后台执行
     void swapOut();
+
+    void call();
+
+    void back();
     uint64_t getId() const { return m_id;}
+    State getState() const {return m_state; }
 
 public:
     //设置当前协程
