@@ -26,7 +26,7 @@ Scheduler::Scheduler(size_t threads, bool use_caller, const std::string& name)
         //为了确保创建调度器时，当前线程里边没有调度器
         SYLAR_ASSERT(GetThis() == nullptr);
         t_scheduler = this;
-        m_rootFiber.reset(new Fiber(std::bind(&Scheduler::run, this)));     //??
+        m_rootFiber.reset(new Fiber(std::bind(&Scheduler::run, this), 0, true));     //??
         sylar::Thread::SetName(name);
         t_fiber = m_rootFiber.get();
         m_rootThread = sylar::GetThreadId();
@@ -69,8 +69,7 @@ void Scheduler::start() {
     lock.unlock();
 
     if(m_rootFiber) {
-        m_rootFiber->swapIn();
-        //m_rootFiber->call();
+        m_rootFiber->call();
         SYLAR_LOG_INFO(g_logger) << "call out " << m_rootFiber->getState();
     }
 }
@@ -146,6 +145,7 @@ void Scheduler::run() {
 
                 ft = *it;
                 m_fibers.erase(it);
+                break;
             }
         }
 
