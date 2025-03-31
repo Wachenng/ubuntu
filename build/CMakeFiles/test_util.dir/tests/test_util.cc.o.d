@@ -201,4 +201,10 @@ CMakeFiles/test_util.dir/tests/test_util.cc.o: \
  /home/ubuntu/server/./sylar/singleton.h \
  /home/ubuntu/server/./sylar/mutex.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /usr/include/c++/11/atomic /home/ubuntu/server/./sylar/macro.h
+ /usr/include/c++/11/atomic /home/ubuntu/server/./sylar/thread.h \
+ /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/chrono \
+ /usr/include/c++/11/ratio /usr/include/c++/11/limits \
+ /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
+ /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
+ /home/ubuntu/server/./sylar/macro.h

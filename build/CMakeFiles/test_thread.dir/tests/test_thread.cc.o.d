@@ -205,6 +205,7 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /home/ubuntu/server/./sylar/singleton.h \
+ /home/ubuntu/server/./sylar/thread.h \
  /home/ubuntu/server/./sylar/config.h /usr/include/boost/lexical_cast.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \

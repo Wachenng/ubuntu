@@ -200,12 +200,16 @@ CMakeFiles/sylar.dir/sylar/log.cc.o: /home/ubuntu/server/sylar/log.cc \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /home/ubuntu/server/sylar/singleton.h /home/ubuntu/server/sylar/mutex.h \
  /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /usr/include/c++/11/atomic /usr/include/c++/11/iostream \
+ /usr/include/c++/11/atomic /home/ubuntu/server/sylar/thread.h \
+ /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/chrono \
+ /usr/include/c++/11/ratio /usr/include/c++/11/limits \
+ /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
- /usr/local/include/yaml-cpp/yaml.h /usr/local/include/yaml-cpp/parser.h \
- /usr/local/include/yaml-cpp/dll.h /usr/local/include/yaml-cpp/emitter.h \
- /usr/include/c++/11/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/c++/11/iostream /usr/local/include/yaml-cpp/yaml.h \
+ /usr/local/include/yaml-cpp/parser.h /usr/local/include/yaml-cpp/dll.h \
+ /usr/local/include/yaml-cpp/emitter.h /usr/include/c++/11/cmath \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
@@ -215,7 +219,7 @@ CMakeFiles/sylar.dir/sylar/log.cc.o: /home/ubuntu/server/sylar/log.cc \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
  /usr/include/c++/11/cstddef /usr/include/c++/11/cstring \
- /usr/include/c++/11/limits /usr/local/include/yaml-cpp/binary.h \
+ /usr/local/include/yaml-cpp/binary.h \
  /usr/local/include/yaml-cpp/emitterdef.h \
  /usr/local/include/yaml-cpp/emittermanip.h \
  /usr/local/include/yaml-cpp/null.h \

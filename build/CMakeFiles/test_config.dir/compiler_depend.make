@@ -880,10 +880,23 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: ../tests/test_config.cc \
   ../sylar/mutex.h \
   /usr/include/semaphore.h \
   /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+  ../sylar/thread.h \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
+  /usr/include/c++/11/chrono \
+  /usr/include/c++/11/ratio \
+  /usr/include/c++/11/bits/parse_numbers.h \
   ../sylar/log.h \
   ../sylar/singleton.h \
   /usr/include/c++/11/iostream
 
+
+/usr/include/c++/11/bits/parse_numbers.h:
+
+/usr/include/c++/11/ratio:
+
+/usr/include/c++/11/bits/this_thread_sleep.h:
 
 /usr/include/semaphore.h:
 
@@ -998,6 +1011,8 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: ../tests/test_config.cc \
 /usr/include/boost/mpl/comparison.hpp:
 
 /usr/include/boost/mpl/iterator_range.hpp:
+
+/usr/include/c++/11/thread:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_impl.hpp:
 
@@ -2027,6 +2042,8 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: ../tests/test_config.cc \
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
+../sylar/thread.h:
+
 /usr/include/assert.h:
 
 /usr/include/c++/11/bits/allocated_ptr.h:
@@ -2220,6 +2237,8 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: ../tests/test_config.cc \
 /usr/include/boost/preprocessor/control/while.hpp:
 
 /usr/include/boost/preprocessor/facilities/identity.hpp:
+
+/usr/include/c++/11/chrono:
 
 /usr/include/boost/mpl/protect.hpp:
 
@@ -2600,6 +2619,8 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: ../tests/test_config.cc \
 /usr/include/boost/preprocessor/arithmetic/detail/div_base.hpp:
 
 /usr/include/boost/preprocessor/comparison/less_equal.hpp:
+
+/usr/include/c++/11/bits/std_thread.h:
 
 /usr/include/boost/preprocessor/logical/not.hpp:
 

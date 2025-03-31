@@ -6,7 +6,7 @@
 
 namespace sylar {
 
-static Logger::ptr g_logger = SYLAR_LOG_NAME("system");
+static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
     
 static std::atomic<uint64_t> s_fiber_id(0);
 static std::atomic<uint64_t> s_fiber_count(0);
@@ -142,14 +142,12 @@ Fiber::ptr Fiber::GetThis() {
 
 void Fiber::YieldToReady() {
     Fiber::ptr cur = GetThis();
-    SYLAR_ASSERT(cur->m_state == EXEC);
     cur->m_state = READY;
     cur->swapOut();
 }
 
 void Fiber::YieldToHold() {
     Fiber::ptr cur = GetThis();
-    SYLAR_ASSERT(cur->m_state == EXEC);
     cur->m_state = HOLD;
     cur->swapOut();
 }
@@ -172,6 +170,11 @@ void Fiber::MainFunc() {
         cur->m_state = EXCEPT;
         SYLAR_LOG_ERROR(g_logger) << "Fiber Except";
     }
+
+    auto raw_ptr = cur.get();
+    cur.reset();
+    raw_ptr->swapOut();
+    SYLAR_ASSERT2(false, "never reach fiber_main");
 }
 
 } // namespace sylar

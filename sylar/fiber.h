@@ -2,6 +2,7 @@
 #define __SYLAR__FIBER_H__
 
 /*
+Fiber::GetThis() --> 创建主协程
 Thread->main_fiber <--------------> sub_fiber
             ^
             |
@@ -23,12 +24,12 @@ public:
     typedef std::shared_ptr<Fiber> ptr;
 
     enum State {
-        INIT,
-        HOLD,
-        EXEC,
-        TERM,
-        READY,
-        EXCEPT
+        INIT,           //// 初始状态
+        HOLD,           //// 暂停状态
+        EXEC,           //// 执行状态
+        TERM,           //// 结束状态
+        READY,          //// 就绪状态
+        EXCEPT          //// 异常状态
     };
 
 private:
@@ -64,7 +65,7 @@ public:
 private:
     uint64_t m_id = 0;
     uint32_t m_stacksize = 0;
-    State m_state = State::INIT;
+    State m_state = INIT;
 
     ucontext_t m_ctx;
     void* m_stack = nullptr;

@@ -879,7 +879,14 @@ CMakeFiles/sylar.dir/sylar/config.cc.o: ../sylar/config.cc \
   ../sylar/singleton.h \
   ../sylar/mutex.h \
   /usr/include/semaphore.h \
-  /usr/include/x86_64-linux-gnu/bits/semaphore.h
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+  ../sylar/thread.h \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
+  /usr/include/c++/11/chrono \
+  /usr/include/c++/11/ratio \
+  /usr/include/c++/11/bits/parse_numbers.h
 
 CMakeFiles/sylar.dir/sylar/config_log.cc.o: ../sylar/config_log.cc \
   /usr/include/stdc-predef.h \
@@ -1130,9 +1137,18 @@ CMakeFiles/sylar.dir/sylar/config_log.cc.o: ../sylar/config_log.cc \
   /usr/include/semaphore.h \
   /usr/include/x86_64-linux-gnu/bits/semaphore.h \
   /usr/include/c++/11/atomic \
-  ../sylar/config.h \
+  ../sylar/thread.h \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
+  /usr/include/c++/11/chrono \
+  /usr/include/c++/11/ratio \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/ctime \
+  /usr/include/c++/11/bits/parse_numbers.h \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/std_function.h \
+  ../sylar/config.h \
   /usr/include/boost/lexical_cast.hpp \
   /usr/include/boost/config.hpp \
   /usr/include/boost/config/user.hpp \
@@ -1393,7 +1409,6 @@ CMakeFiles/sylar.dir/sylar/config_log.cc.o: ../sylar/config_log.cc \
   /usr/include/boost/concept/detail/concept_undef.hpp \
   /usr/include/boost/iterator/iterator_concepts.hpp \
   /usr/include/boost/limits.hpp \
-  /usr/include/c++/11/limits \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/bits/stl_algo.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
@@ -1524,7 +1539,6 @@ CMakeFiles/sylar.dir/sylar/config_log.cc.o: ../sylar/config_log.cc \
   /usr/include/c++/11/cstring \
   /usr/include/c++/11/locale \
   /usr/include/c++/11/bits/locale_facets_nonio.h \
-  /usr/include/c++/11/ctime \
   /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
   /usr/include/libintl.h \
@@ -2904,9 +2918,18 @@ CMakeFiles/sylar.dir/sylar/log.cc.o: ../sylar/log.cc \
   /usr/include/semaphore.h \
   /usr/include/x86_64-linux-gnu/bits/semaphore.h \
   /usr/include/c++/11/atomic \
-  /usr/include/c++/11/iostream \
+  ../sylar/thread.h \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
+  /usr/include/c++/11/chrono \
+  /usr/include/c++/11/ratio \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/ctime \
+  /usr/include/c++/11/bits/parse_numbers.h \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/std_function.h \
+  /usr/include/c++/11/iostream \
   /usr/local/include/yaml-cpp/yaml.h \
   /usr/local/include/yaml-cpp/parser.h \
   /usr/local/include/yaml-cpp/dll.h \
@@ -2924,7 +2947,6 @@ CMakeFiles/sylar.dir/sylar/log.cc.o: ../sylar/log.cc \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/c++/11/cstddef \
   /usr/include/c++/11/cstring \
-  /usr/include/c++/11/limits \
   /usr/local/include/yaml-cpp/binary.h \
   /usr/local/include/yaml-cpp/emitterdef.h \
   /usr/local/include/yaml-cpp/emittermanip.h \
@@ -3674,13 +3696,6 @@ CMakeFiles/sylar.dir/sylar/util.cc.o: ../sylar/util.cc \
   /usr/include/semaphore.h \
   /usr/include/x86_64-linux-gnu/bits/semaphore.h \
   /usr/include/c++/11/atomic \
-  ../sylar/fiber.h \
-  /usr/include/c++/11/functional \
-  /usr/include/c++/11/bits/std_function.h \
-  /usr/include/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/indirect-return.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
   ../sylar/thread.h \
   /usr/include/c++/11/thread \
   /usr/include/c++/11/bits/std_thread.h \
@@ -3689,7 +3704,14 @@ CMakeFiles/sylar.dir/sylar/util.cc.o: ../sylar/util.cc \
   /usr/include/c++/11/ratio \
   /usr/include/c++/11/limits \
   /usr/include/c++/11/ctime \
-  /usr/include/c++/11/bits/parse_numbers.h
+  /usr/include/c++/11/bits/parse_numbers.h \
+  /usr/include/c++/11/functional \
+  /usr/include/c++/11/bits/std_function.h \
+  ../sylar/fiber.h \
+  /usr/include/ucontext.h \
+  /usr/include/x86_64-linux-gnu/bits/indirect-return.h \
+  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h
 
 
 /usr/include/execinfo.h:
@@ -3697,12 +3719,6 @@ CMakeFiles/sylar.dir/sylar/util.cc.o: ../sylar/util.cc \
 ../sylar/util.cc:
 
 ../sylar/mutex.cc:
-
-/usr/include/c++/11/bits/parse_numbers.h:
-
-/usr/include/c++/11/ratio:
-
-/usr/include/c++/11/bits/this_thread_sleep.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
 
@@ -3713,6 +3729,12 @@ CMakeFiles/sylar.dir/sylar/util.cc.o: ../sylar/util.cc \
 ../sylar/fiber.h:
 
 ../sylar/config_log.cc:
+
+/usr/include/c++/11/bits/parse_numbers.h:
+
+/usr/include/c++/11/ratio:
+
+/usr/include/c++/11/bits/this_thread_sleep.h:
 
 /usr/include/semaphore.h:
 

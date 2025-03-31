@@ -102,6 +102,14 @@ public:
     }
 };
 
+class ThreadNameFormatItem : public LogFormatter::FormatItem {
+    public:
+        ThreadNameFormatItem(const std::string& str = "") {}
+        void format(std::ostream& os, std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) override {
+            os << event->getThreadName();
+        }
+    };
+
 class DateTimeFormatItem : public LogFormatter::FormatItem {
 public:
     DateTimeFormatItem(const std::string& format = "%Y-%m-%d %H:%M:%S")
@@ -173,13 +181,14 @@ public:
 
 /*********************************  LogEvent  *********************************/
 LogEvent::LogEvent(std::shared_ptr<Logger> logger, LogLevel::Level level, const char* file, int32_t line, uint32_t elapse
-    , uint32_t threadId, uint32_t fiberId, uint64_t time) 
+    , uint32_t threadId, uint32_t fiberId, uint64_t time, const std::string& threadName) 
     :m_file(file)
     ,m_line(line)
     ,m_elapse(elapse)
     ,m_threadId(threadId)
     ,m_fiberId(fiberId)
     ,m_time(time)
+    ,m_threadName(threadName)
     ,m_logger(logger)
     ,m_level(level){
 }
@@ -328,17 +337,18 @@ void LogFormatter::init() {
 #define XX(str, C) \
         {#str, [](const std::string& fmt) { return FormatItem::ptr (new C(fmt));}}
 
-        XX(m, MessageFormatItem),
-        XX(p, LevelFormatItem),
-        XX(r, ElapseFormatItem),
-        XX(c, NameFormatItem),
-        XX(t, ThreadIdFormatItem),
-        XX(F, FiberIdFormatItem),
-        XX(n, NewLineFormatItem),
-        XX(d, DateTimeFormatItem),
-        XX(f, FileNameFormatItem),
-        XX(l, LineFormatItem),
-        XX(T, TabFormatItem),
+        XX(m, MessageFormatItem),       //消息
+        XX(p, LevelFormatItem),         //日志级别
+        XX(r, ElapseFormatItem),        //累计毫秒数
+        XX(c, NameFormatItem),          //日志名称
+        XX(t, ThreadIdFormatItem),      //线程id
+        XX(F, FiberIdFormatItem),       //协程id
+        XX(n, NewLineFormatItem),       //换行
+        XX(d, DateTimeFormatItem),      //时间
+        XX(f, FileNameFormatItem),      //文件名
+        XX(l, LineFormatItem),          //行号
+        XX(T, TabFormatItem),           //Tab
+        XX(N, ThreadNameFormatItem),    //线程名称
 #undef XX
     };
 
@@ -458,7 +468,7 @@ bool FileLogAppender::reopen() {
 Logger::Logger(const std::string& name)
     :m_name(name)
     ,m_level(LogLevel::DEBUG) {
-        m_formatter.reset(new LogFormatter("%d{%Y-%m-%d %H:%M:%S}%T%t%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"));
+        m_formatter.reset(new LogFormatter("%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"));
     }
 
 void Logger::setFormatter(LogFormatter::ptr val) {
