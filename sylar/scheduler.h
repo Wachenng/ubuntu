@@ -81,6 +81,7 @@ protected:
     virtual void tickle();
     void run();
     virtual bool stopping();
+    virtual void idle();
 
     void setThis();
 private:
@@ -145,8 +146,8 @@ private:
 protected:
     std::vector<int> m_threadIds;
     size_t m_threadCount = 0;
-    size_t m_activeThreadCount = 0;
-    size_t m_idleThreadCount = 0;
+    std::atomic<size_t> m_activeThreadCount {0};
+    std::atomic<size_t> m_idleThreadCount {0};
     bool m_stopping = true;
     bool m_autostop = false;
     int m_rootThread = 0;
