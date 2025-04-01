@@ -46,6 +46,8 @@ private:
         };
 
         EventContext& getContext(Event event);
+        void resetContext(EventContext& ctx);
+        void triggerEvent(Event event);
 
         int fd = 0;                  //事件描述符
         EventContext read;       //读事件
