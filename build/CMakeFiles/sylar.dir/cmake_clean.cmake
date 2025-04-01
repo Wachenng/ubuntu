@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sylar.dir/sylar/config_log.cc.o.d"
   "CMakeFiles/sylar.dir/sylar/fiber.cc.o"
   "CMakeFiles/sylar.dir/sylar/fiber.cc.o.d"
+  "CMakeFiles/sylar.dir/sylar/iomanager.cc.o"
+  "CMakeFiles/sylar.dir/sylar/iomanager.cc.o.d"
   "CMakeFiles/sylar.dir/sylar/log.cc.o"
   "CMakeFiles/sylar.dir/sylar/log.cc.o.d"
   "CMakeFiles/sylar.dir/sylar/mutex.cc.o"
