@@ -1,0 +1,1 @@
+/usr/bin/c++  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-sign-compare -rdynamic CMakeFiles/test_timer.dir/tests/test_timer.cc.o -o ../bin/test_timer   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib:/home/ubuntu/server/lib ../lib/libsylar.so -lyaml-cpp 

@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ubuntu/server/sylar/mutex.cc" "CMakeFiles/sylar.dir/sylar/mutex.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/mutex.cc.o.d"
   "/home/ubuntu/server/sylar/scheduler.cc" "CMakeFiles/sylar.dir/sylar/scheduler.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/scheduler.cc.o.d"
   "/home/ubuntu/server/sylar/thread.cc" "CMakeFiles/sylar.dir/sylar/thread.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/thread.cc.o.d"
+  "/home/ubuntu/server/sylar/timer.cc" "CMakeFiles/sylar.dir/sylar/timer.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/timer.cc.o.d"
   "/home/ubuntu/server/sylar/util.cc" "CMakeFiles/sylar.dir/sylar/util.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/util.cc.o.d"
   )
 
