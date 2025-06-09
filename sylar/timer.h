@@ -2,6 +2,7 @@
 #define __SYLAR_TIMER_H__ 
 
 #include <memory>
+#include <vector>
 #include <set>
 #include "fiber.h"
 // Timer --> addTimer() --->cancel()
@@ -17,6 +18,15 @@ friend class TimerManager;
 public:
     typedef std::shared_ptr<Timer> ptr;
 
+    // 取消定时器
+    bool cancel();
+
+    //刷新设定定时器的执行时间
+    bool refresh();
+
+    // 是否从当时时间为基准重置时间
+    bool reset(uint64_t ms, bool from_now);
+
 private:
     /**
      * @brief 通过TimerManager创建定时器
@@ -28,10 +38,11 @@ private:
     Timer(uint64_t ms, std::function<void()> cb,
           bool recurring, TimerManager* manager);
 
+    Timer(uint64_t next);
 
 private:
     // 是否循环
-    bool m_recurring;
+    bool m_recurring = false;
     // 定时周期
     uint64_t m_ms = 0;
     // 精确的执行时间 11：55：28
@@ -73,13 +84,26 @@ public:
     Timer::ptr addConditionTimer(uint64_t ms, std::function<void()> cb
                ,std::weak_ptr<void> weak_cond, bool recurring = false);
 
+    // 获取下一个定时器的执行时间
+    uint64_t getNextTimer();
+
+    // 返回超时以及需要执行的Timer的回调函数
+    void listExpiredCb(std::vector<std::function<void()> >& cbs);
+
+    // 是否有定时器
+    bool hasTimer();
 protected:
     virtual void onTimerInsertedAtFront() = 0;
+    void addTimer(Timer::ptr val, RWMutexType::WriteLock& lock);
+
+private:
+    bool detectClockRollover(uint64_t now_ms);
 
 private:
     RWMutexType m_mutex;
     std::set<Timer::ptr, Timer::Comparator> m_timers;
-
+    bool m_tickled = false;
+    uint64_t m_previouse_time = 0;
 };
 
 }
