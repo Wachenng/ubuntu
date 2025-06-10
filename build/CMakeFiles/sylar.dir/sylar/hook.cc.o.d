@@ -242,4 +242,4 @@ CMakeFiles/sylar.dir/sylar/hook.cc.o: /home/ubuntu/server/sylar/hook.cc \
  /usr/include/c++/11/bits/stl_multiset.h /usr/include/dlfcn.h \
  /usr/include/x86_64-linux-gnu/bits/dlfcn.h \
  /usr/include/x86_64-linux-gnu/bits/dl_find_object.h \
- /usr/include/c++/11/iostream
+ /usr/include/c++/11/iostream /home/ubuntu/server/sylar/fd_manager.h

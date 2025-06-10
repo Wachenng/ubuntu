@@ -2,6 +2,7 @@
 #define __SYLAR_FDMANAGER_H__ 
 
 #include <memory>
+#include <vector>
 #include "thread.h"
 #include "singleton.h"
 
