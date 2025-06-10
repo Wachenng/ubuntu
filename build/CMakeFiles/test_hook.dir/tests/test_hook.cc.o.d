@@ -245,4 +245,5 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: \
  /home/ubuntu/server/tests/../sylar/log.h \
  /home/ubuntu/server/tests/../sylar/timer.h /usr/include/c++/11/set \
  /usr/include/c++/11/bits/stl_set.h \
- /usr/include/c++/11/bits/stl_multiset.h /usr/include/c++/11/iostream
+ /usr/include/c++/11/bits/stl_multiset.h /usr/include/arpa/inet.h \
+ /usr/include/netinet/in.h /usr/include/x86_64-linux-gnu/bits/in.h
