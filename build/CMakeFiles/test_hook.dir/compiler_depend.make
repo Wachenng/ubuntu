@@ -262,6 +262,38 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/std_function.h \
   ../sylar/hook.h \
+  /usr/include/x86_64-linux-gnu/sys/socket.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+  /usr/include/x86_64-linux-gnu/bits/socket.h \
+  /usr/include/x86_64-linux-gnu/bits/socket_type.h \
+  /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
+  /usr/include/x86_64-linux-gnu/asm/socket.h \
+  /usr/include/asm-generic/socket.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/x86_64-linux-gnu/asm/sockios.h \
+  /usr/include/asm-generic/sockios.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
+  /usr/include/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+  /usr/include/linux/falloc.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
+  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
+  /usr/include/x86_64-linux-gnu/asm/ioctls.h \
+  /usr/include/asm-generic/ioctls.h \
+  /usr/include/linux/ioctl.h \
+  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
+  /usr/include/asm-generic/ioctl.h \
+  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
+  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
   ../sylar/iomanager.h \
   ../sylar/scheduler.h \
   ../sylar/fiber.h \
@@ -279,8 +311,6 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
 
 /usr/include/c++/11/iostream:
 
-/usr/include/c++/11/bits/stl_set.h:
-
 /usr/include/c++/11/set:
 
 ../sylar/timer.h:
@@ -297,9 +327,43 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
 
 ../sylar/iomanager.h:
 
+/usr/include/x86_64-linux-gnu/bits/ioctl-types.h:
+
+/usr/include/asm-generic/ioctl.h:
+
+/usr/include/asm-generic/ioctls.h:
+
+/usr/include/x86_64-linux-gnu/asm/ioctls.h:
+
+/usr/include/c++/11/bits/stl_set.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
+
+/usr/include/x86_64-linux-gnu/bits/stat.h:
+
+/usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
+
+/usr/include/x86_64-linux-gnu/bits/fcntl.h:
+
+/usr/include/fcntl.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h:
+
+/usr/include/asm-generic/sockios.h:
+
+/usr/include/x86_64-linux-gnu/asm/posix_types.h:
+
+/usr/include/linux/posix_types.h:
+
+/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket.h:
+
 ../sylar/hook.h:
 
 /usr/include/c++/11/bits/parse_numbers.h:
+
+/usr/include/x86_64-linux-gnu/asm/socket.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
@@ -349,6 +413,8 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
+/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
+
 /usr/include/c++/11/backward/binders.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
@@ -391,6 +457,8 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
 
 /usr/include/c++/11/tuple:
 
+/usr/include/x86_64-linux-gnu/sys/ioctl.h:
+
 /usr/include/c++/11/bits/stl_tree.h:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
@@ -399,11 +467,17 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
+/usr/include/linux/falloc.h:
+
 /usr/include/c++/11/bits/postypes.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
+/usr/include/x86_64-linux-gnu/asm/ioctl.h:
+
 /usr/include/c++/11/bits/functexcept.h:
+
+/usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
@@ -454,6 +528,10 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
 /usr/include/c++/11/bits/stl_multimap.h:
 
 /usr/include/c++/11/bits/stringfwd.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
+
+/usr/include/x86_64-linux-gnu/sys/socket.h:
 
 /usr/include/c++/11/bits/stl_function.h:
 
@@ -511,6 +589,8 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
+/usr/include/asm-generic/socket.h:
+
 /usr/include/c++/11/bits/invoke.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
@@ -543,6 +623,8 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
+/usr/include/asm-generic/bitsperlong.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/include/c++/11/bits/concept_check.h:
@@ -554,6 +636,8 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
 /usr/include/c++/11/bits/sstream.tcc:
 
 /usr/include/c++/11/new:
+
+/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 
@@ -583,7 +667,11 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
+/usr/include/x86_64-linux-gnu/asm/sockios.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/linux/ioctl.h:
 
 /usr/include/c++/11/bits/std_function.h:
 
@@ -667,6 +755,8 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
 
 /usr/include/c++/11/typeinfo:
 
+/usr/include/linux/stddef.h:
+
 /usr/include/c++/11/bits/refwrap.h:
 
 /usr/include/c++/11/exception:
@@ -706,6 +796,8 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
 /usr/include/c++/11/sstream:
 
 /usr/include/c++/11/istream:
+
+/usr/include/x86_64-linux-gnu/bits/ioctls.h:
 
 /usr/include/c++/11/bits/ios_base.h:
 
@@ -765,6 +857,8 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
 
+/usr/include/asm-generic/posix_types.h:
+
 /usr/include/c++/11/bits/fstream.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
@@ -778,6 +872,8 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
 /usr/include/c++/11/bits/streambuf.tcc:
 
 /usr/include/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket_type.h:
 
 ../sylar/util.h:
 
