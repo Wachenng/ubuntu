@@ -28,3 +28,5 @@ CXX_FLAGS =  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror 
 
 # Custom defines: CMakeFiles/sylar.dir/sylar/timer.cc.o_DEFINES = __FILE__="sylar/timer.cc"
 
+# Custom defines: CMakeFiles/sylar.dir/sylar/hook.cc.o_DEFINES = __FILE__="sylar/hook.cc"
+

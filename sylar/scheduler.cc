@@ -2,6 +2,8 @@
 #include "macro.h"
 #include "log.h"
 
+#include "hook.h"
+
 namespace sylar {
 
 static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
@@ -27,7 +29,7 @@ Scheduler::Scheduler(size_t threads, bool use_caller, const std::string& name)
         SYLAR_ASSERT(GetThis() == nullptr);
         t_scheduler = this;
         m_rootFiber.reset(new Fiber(std::bind(&Scheduler::run, this), 0, true));     //??
-        sylar::Thread::SetName(name);
+        sylar::Thread::SetName(m_name);
         t_fiber = m_rootFiber.get();
         m_rootThread = sylar::GetThreadId();
         m_threadIds.push_back(m_rootThread);
@@ -136,6 +138,10 @@ void Scheduler::setThis() {
 
 void Scheduler::run() {
     SYLAR_LOG_INFO(g_logger) << "Scheduler::run";
+
+    //设置HOOK
+    set_hook_enable(true);
+
     setThis();
     if(sylar::GetFiberId() != m_rootThread) {
         t_fiber = Fiber::GetThis().get();
@@ -178,7 +184,7 @@ void Scheduler::run() {
         }
 
         if(ft.fiber && (ft.fiber->getState() != Fiber::TERM
-                        || ft.fiber->getState() != Fiber::EXCEPT)) {
+                        && ft.fiber->getState() != Fiber::EXCEPT)) {
             ft.fiber->swapIn();
             --m_activeThreadCount;
 
@@ -201,8 +207,8 @@ void Scheduler::run() {
             if(cb_fiber->getState() == Fiber::READY) {
                 schedule(cb_fiber);
                 cb_fiber.reset();
-            } else if(cb_fiber->getState() != Fiber::EXCEPT
-                    || cb_fiber->getState() != Fiber::TERM) {
+            } else if(cb_fiber->getState() == Fiber::EXCEPT
+                    || cb_fiber->getState() == Fiber::TERM) {
                 cb_fiber->reset(nullptr);
             } else {
                 cb_fiber->m_state = Fiber::HOLD;

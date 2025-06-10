@@ -209,4 +209,4 @@ CMakeFiles/sylar.dir/sylar/scheduler.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /home/ubuntu/server/sylar/singleton.h /home/ubuntu/server/sylar/macro.h \
- /usr/include/assert.h
+ /usr/include/assert.h /home/ubuntu/server/sylar/hook.h

@@ -145,7 +145,11 @@ public:
     void unlock() {
         pthread_mutex_unlock(&m_mutex);
     }
-
+private:
+    //C++11 禁止默认拷贝
+    Mutex(const Mutex&) = delete;
+    Mutex(const Mutex&&) = delete; 
+    Mutex& operator=(const Mutex&) = delete; 
 private:
     pthread_mutex_t m_mutex;
 };
@@ -162,7 +166,11 @@ public:
     void lock() {}
 
     void unlock() {}
-
+private:
+    //C++11 禁止默认拷贝
+    NullMutex(const NullMutex&) = delete;
+    NullMutex(const NullMutex&&) = delete; 
+    NullMutex& operator=(const NullMutex&) = delete; 
 };
 
 
@@ -191,6 +199,12 @@ public:
         pthread_rwlock_unlock(&m_lock);
     }
 private:
+    //C++11 禁止默认拷贝
+    RWMutex(const RWMutex&) = delete;
+    RWMutex(const RWMutex&&) = delete; 
+    RWMutex& operator=(const RWMutex&) = delete; 
+
+private:
     pthread_rwlock_t m_lock;
 };
 
@@ -209,6 +223,11 @@ public:
     void wrlock() {}
 
     void unlock() {}
+private:
+    //C++11 禁止默认拷贝
+    NullRWMutex(const NullRWMutex&) = delete;
+    NullRWMutex(const NullRWMutex&&) = delete; 
+    NullRWMutex& operator=(const NullRWMutex&) = delete; 
 };
 
 
@@ -230,6 +249,11 @@ public:
     void unlock() {
         pthread_spin_unlock(&m_mutex);
     }
+private:
+    //C++11 禁止默认拷贝
+    Spinlock(const Spinlock&) = delete;
+    Spinlock(const Spinlock&&) = delete; 
+    Spinlock& operator=(const Spinlock&) = delete; 
 private:
     pthread_spinlock_t m_mutex;
 };
@@ -253,6 +277,11 @@ public:
     void unlock() {
         std::atomic_flag_clear_explicit(&m_mutex, std::memory_order_release);
     }   
+private:
+    //C++11 禁止默认拷贝
+    CASLock(const CASLock&) = delete;
+    CASLock(const CASLock&&) = delete; 
+    CASLock& operator=(const CASLock&) = delete; 
 private:
     volatile std::atomic_flag m_mutex;
 };
