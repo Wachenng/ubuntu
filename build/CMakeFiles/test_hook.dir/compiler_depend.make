@@ -306,10 +306,14 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
   /usr/include/c++/11/set \
   /usr/include/c++/11/bits/stl_set.h \
   /usr/include/c++/11/bits/stl_multiset.h \
-  /usr/include/c++/11/iostream
+  /usr/include/arpa/inet.h \
+  /usr/include/netinet/in.h \
+  /usr/include/x86_64-linux-gnu/bits/in.h
 
 
-/usr/include/c++/11/iostream:
+/usr/include/netinet/in.h:
+
+/usr/include/arpa/inet.h:
 
 /usr/include/c++/11/set:
 
@@ -466,6 +470,8 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o: ../tests/test_hook.cc \
 /usr/include/c++/11/cstdint:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/x86_64-linux-gnu/bits/in.h:
 
 /usr/include/linux/falloc.h:
 

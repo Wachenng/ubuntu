@@ -32,3 +32,5 @@ CXX_FLAGS =  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror 
 
 # Custom defines: CMakeFiles/sylar.dir/sylar/fd_manager.cc.o_DEFINES = __FILE__="sylar/fd_manager.cc"
 
+# Custom defines: CMakeFiles/sylar.dir/sylar/address.cc.o_DEFINES = __FILE__="sylar/address.cc"
+
