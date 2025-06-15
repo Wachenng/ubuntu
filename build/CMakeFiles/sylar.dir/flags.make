@@ -36,3 +36,5 @@ CXX_FLAGS =  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror 
 
 # Custom defines: CMakeFiles/sylar.dir/sylar/socket.cc.o_DEFINES = __FILE__="sylar/socket.cc"
 
+# Custom defines: CMakeFiles/sylar.dir/sylar/bytearray.cc.o_DEFINES = __FILE__="sylar/bytearray.cc"
+

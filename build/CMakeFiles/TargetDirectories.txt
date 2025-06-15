@@ -9,5 +9,6 @@
 /home/ubuntu/server/build/CMakeFiles/test_hook.dir
 /home/ubuntu/server/build/CMakeFiles/test_address.dir
 /home/ubuntu/server/build/CMakeFiles/test_socket.dir
+/home/ubuntu/server/build/CMakeFiles/test_bytearray.dir
 /home/ubuntu/server/build/CMakeFiles/edit_cache.dir
 /home/ubuntu/server/build/CMakeFiles/rebuild_cache.dir
