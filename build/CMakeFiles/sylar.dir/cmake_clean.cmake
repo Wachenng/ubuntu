@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sylar.dir/sylar/fiber.cc.o.d"
   "CMakeFiles/sylar.dir/sylar/hook.cc.o"
   "CMakeFiles/sylar.dir/sylar/hook.cc.o.d"
+  "CMakeFiles/sylar.dir/sylar/http/http.cc.o"
+  "CMakeFiles/sylar.dir/sylar/http/http.cc.o.d"
   "CMakeFiles/sylar.dir/sylar/iomanager.cc.o"
   "CMakeFiles/sylar.dir/sylar/iomanager.cc.o.d"
   "CMakeFiles/sylar.dir/sylar/log.cc.o"

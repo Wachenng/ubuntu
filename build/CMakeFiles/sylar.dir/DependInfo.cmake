@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ubuntu/server/sylar/fd_manager.cc" "CMakeFiles/sylar.dir/sylar/fd_manager.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/fd_manager.cc.o.d"
   "/home/ubuntu/server/sylar/fiber.cc" "CMakeFiles/sylar.dir/sylar/fiber.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/fiber.cc.o.d"
   "/home/ubuntu/server/sylar/hook.cc" "CMakeFiles/sylar.dir/sylar/hook.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/hook.cc.o.d"
+  "/home/ubuntu/server/sylar/http/http.cc" "CMakeFiles/sylar.dir/sylar/http/http.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/http/http.cc.o.d"
   "/home/ubuntu/server/sylar/iomanager.cc" "CMakeFiles/sylar.dir/sylar/iomanager.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/iomanager.cc.o.d"
   "/home/ubuntu/server/sylar/log.cc" "CMakeFiles/sylar.dir/sylar/log.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/log.cc.o.d"
   "/home/ubuntu/server/sylar/mutex.cc" "CMakeFiles/sylar.dir/sylar/mutex.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/mutex.cc.o.d"
