@@ -10,8 +10,8 @@ HttpSession::HttpSession(Socket::ptr sock, bool owner)
 
 HttpRequest::ptr HttpSession::recvRequest() {
     HttpRequestParser::ptr parser(new HttpRequestParser);
-    uint64_t buff_size = HttpRequestParser::GetHttpRequestBufferSize();
-    //uint64_t buff_size = 100;
+    //uint64_t buff_size = HttpRequestParser::GetHttpRequestBufferSize();
+    uint64_t buff_size = 100;
     std::shared_ptr<char> buffer(
             new char[buff_size], [](char* ptr){
                 delete[] ptr;

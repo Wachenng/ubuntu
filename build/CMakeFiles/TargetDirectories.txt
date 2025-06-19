@@ -14,5 +14,6 @@
 /home/ubuntu/server/build/CMakeFiles/test_http_parser.dir
 /home/ubuntu/server/build/CMakeFiles/test_tcp_server.dir
 /home/ubuntu/server/build/CMakeFiles/echo_server.dir
+/home/ubuntu/server/build/CMakeFiles/test_http_server.dir
 /home/ubuntu/server/build/CMakeFiles/edit_cache.dir
 /home/ubuntu/server/build/CMakeFiles/rebuild_cache.dir
