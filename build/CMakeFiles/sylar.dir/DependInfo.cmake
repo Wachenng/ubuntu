@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ubuntu/server/sylar/http/http.cc" "CMakeFiles/sylar.dir/sylar/http/http.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/http/http.cc.o.d"
   "/home/ubuntu/server/sylar/http/http11_parser.rl.cc" "CMakeFiles/sylar.dir/sylar/http/http11_parser.rl.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/http/http11_parser.rl.cc.o.d"
   "/home/ubuntu/server/sylar/http/http_parser.cc" "CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o.d"
+  "/home/ubuntu/server/sylar/http/http_session.cc" "CMakeFiles/sylar.dir/sylar/http/http_session.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/http/http_session.cc.o.d"
   "/home/ubuntu/server/sylar/http/httpclient_parser.rl.cc" "CMakeFiles/sylar.dir/sylar/http/httpclient_parser.rl.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/http/httpclient_parser.rl.cc.o.d"
   "/home/ubuntu/server/sylar/iomanager.cc" "CMakeFiles/sylar.dir/sylar/iomanager.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/iomanager.cc.o.d"
   "/home/ubuntu/server/sylar/log.cc" "CMakeFiles/sylar.dir/sylar/log.cc.o" "gcc" "CMakeFiles/sylar.dir/sylar/log.cc.o.d"

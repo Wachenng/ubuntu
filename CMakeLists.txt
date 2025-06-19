@@ -32,6 +32,8 @@ set(LIB_SRC
    sylar/http/http_parser.cc
    sylar/http/http11_parser.rl.cc
    sylar/http/httpclient_parser.rl.cc
+   
+   sylar/http/http_session.cc
 
    sylar/tcp_server.cc
    sylar/stream.cc
