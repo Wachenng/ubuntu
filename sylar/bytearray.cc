@@ -666,11 +666,14 @@ void ByteArray::read(void* buf, size_t size, size_t position) const {
  */
 void ByteArray::setPosition(size_t v) {
     // 如果传入的位置`v`大于整个字节数组的大小`m_size`，则抛出`std::out_of_range`异常
-    if(v > m_size) {
+    if(v > m_capacity) {
         throw std::out_of_range("set_position out of range");
     }
     // 更新成员变量`m_position`为`v`，表示当前全局位置
     m_position = v;
+    if(m_position > m_size) {
+        m_size = m_position;
+    }
     // m_root：链表的头节点指针。这里将当前块指针`m_cur`重置为链表开头
     m_cur = m_root;
     // 遍历链表，定位到目标块 循环条件：当前剩余的位置`v`大于当前块的大小（`m_cur->size`）

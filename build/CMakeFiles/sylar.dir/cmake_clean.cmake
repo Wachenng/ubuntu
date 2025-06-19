@@ -33,6 +33,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sylar.dir/sylar/scheduler.cc.o.d"
   "CMakeFiles/sylar.dir/sylar/socket.cc.o"
   "CMakeFiles/sylar.dir/sylar/socket.cc.o.d"
+  "CMakeFiles/sylar.dir/sylar/tcp_server.cc.o"
+  "CMakeFiles/sylar.dir/sylar/tcp_server.cc.o.d"
   "CMakeFiles/sylar.dir/sylar/thread.cc.o"
   "CMakeFiles/sylar.dir/sylar/thread.cc.o.d"
   "CMakeFiles/sylar.dir/sylar/timer.cc.o"
