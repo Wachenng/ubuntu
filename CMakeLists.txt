@@ -35,6 +35,7 @@ set(LIB_SRC
    
    sylar/http/http_session.cc
    sylar/http/http_server.cc
+   sylar/http/servlet.cc
 
    sylar/tcp_server.cc
    sylar/stream.cc
